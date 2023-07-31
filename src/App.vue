@@ -44,6 +44,11 @@ export default {
 </script>
 
 <style>
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
   width: 800px;
   font-family: Geneva, sans-serif;
@@ -56,6 +61,7 @@ export default {
 nav {
   border: 2px solid blue;
   padding: 20px;
+  
   display: flex;
   justify-content: end;
   gap: 10px;
