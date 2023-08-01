@@ -1,17 +1,18 @@
 <template>
-  <div>User View</div>
-  <section>
-    <ul>
-      <li v-for="p in projects" :key="p.id">
-          {{ p.title }}, {{ p.image }}
-      </li>
-    </ul>
-  </section>
+  <div class="UserView">
+    <ThumbGrid :projects2="projects"/>
+  </div>
 </template>
 
 <script>
+import ThumbGrid from "./ThumbGrid.vue"
+
 export default {
   name: "UserView",
+
+  components: {
+    ThumbGrid
+  },
 
   props: ["projects"]
 };

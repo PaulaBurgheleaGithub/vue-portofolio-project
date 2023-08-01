@@ -18,20 +18,23 @@
 <script>
 import AdminView from "./components/AdminView.vue";
 import UserView from "./components/UserView.vue";
+import ProjectsData from "./ProjectsData.js";
 
 export default {
-  name: "app",
+  name: "App",
   components: {
     userView: UserView,
     adminView: AdminView
   },
+
   data() {
     return {
       title: "NEEDS TO CHANGE",
       isAdmin: true,
-      allProjects: [],
+      allProjects: ProjectsData,
     };
   },
+
   methods: {
     addProject(project) {
       //add id to each project
