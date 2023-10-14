@@ -1,15 +1,15 @@
 <template>
   <div class="App">
     <nav>
-    <button @click="isAdmin = true" :class="{active: isAdmin}" >ADMIN</button>
-    <button @click="isAdmin = false" :class="{active : !isAdmin}" >USER</button>
+      <button @click="isAdmin = true" :class="{active: isAdmin}" >ADMIN</button>
+      <button @click="isAdmin = false" :class="{active : !isAdmin}" >USER</button>
     </nav>
 
-    <h1>{{ title }}</h1>
+    <h1>{{ pageTitle }}</h1>
 
     <section>
-      <adminView v-if="isAdmin" @createProject="addProject" />
-      <userView v-else :projects="allProjects"/>
+      <AdminView v-if="isAdmin" @createProject="addProject" />
+      <UserView v-else :projects="allProjects" />
     </section>
 
   </div>
@@ -23,13 +23,13 @@ import ProjectsData from "./ProjectsData.js";
 export default {
   name: "App",
   components: {
-    userView: UserView,
-    adminView: AdminView
+    UserView,
+    AdminView
   },
 
   data() {
     return {
-      title: "NEEDS TO CHANGE",
+      pageTitle: "NEEDS TO CHANGE",
       isAdmin: true,
       allProjects: ProjectsData,
     };

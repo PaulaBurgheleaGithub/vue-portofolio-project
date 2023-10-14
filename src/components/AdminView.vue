@@ -1,6 +1,6 @@
 <template>
   <div class="AdminView">
-    <form @submit.prevent="handleSubmit">
+    <form @submit.prevent>
 
       <label for="title">Project Title
         <input type="text" v-model="title"/>
@@ -11,7 +11,7 @@
       </label>
 
       <label for="description" class="span-2-cols">Project Details
-        <input type="text" v-model="description">
+        <textarea type="text" v-model="description"> </textarea>
       </label>
 
       <div class="span-2-cols" style="text-align: center">
@@ -29,7 +29,6 @@ export default {
 
   data() {
     return {
-      pageTitle: "Admin Page",
       title: "",
       image: "",
       description: "",
@@ -47,6 +46,7 @@ export default {
         image: this.image,
         description: this.description,
       };
+      
       this.$emit("createProject", project);
       //reset form data by setting all form filds to ""
       this.title = this.image = this.description = ""

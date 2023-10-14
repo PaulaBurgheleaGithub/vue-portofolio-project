@@ -2,7 +2,7 @@
   "name": "fs-vue-portfolio",
   "version": "0.2.0",
   "private": true,
-  "author": "Krista Moroder & Germinal Camps for CodeOp",
+  "author": "Paula Burghelea",
   "license": "Proprietary",
   "scripts": {
     "dev": "vite",
