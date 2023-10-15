@@ -1,16 +1,22 @@
 <template>
-  <div class="featured">
+  <!-- <div class="featured">
     <figure>
       <img :src="featured.image" 
         :alt="featured.title"
       />
       <figcaption><b>{{featured.title}}</b></figcaption>
       <blockquote>{{featured.details}}</blockquote>
-
     </figure>
   </div>
   <div class="UserView">
     <ThumbGrid :projects2="projects"/>
+  </div> -->
+  <div>
+    <figure class=".featured" v-for="(project, i) in projects" :key="i">
+      <img :src="project.image" :alt="project.title">
+
+    </figure>
+    <!-- <img v-for="(project, i) in projects" :key="i" :src="project.image" :alt="project.title"> -->
   </div>
 </template>
 
