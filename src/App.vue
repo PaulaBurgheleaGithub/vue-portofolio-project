@@ -9,7 +9,11 @@
 
     <section>
       <AdminView v-if="isAdmin" @createProject="addProject" />
-      <UserView v-else :projects="allProjects" />
+      <UserView v-else 
+        :projects="allProjects"
+        :featured="starProject"
+        @showFeatured="appSetFeatured"
+      />
     </section>
 
   </div>
@@ -22,6 +26,7 @@ import ProjectsData from "./ProjectsData.js";
 
 export default {
   name: "App",
+
   components: {
     UserView,
     AdminView
@@ -29,7 +34,7 @@ export default {
 
   data() {
     return {
-      pageTitle: "NEEDS TO CHANGE",
+      pageTitle: "",
       isAdmin: true,
       allProjects: ProjectsData,
     };
@@ -41,7 +46,7 @@ export default {
       project.id = this.allProjects.length;
       //push a project in the projects array
       this.allProjects.push(project);
-    }
+    },
   }
 };
 </script>

@@ -1,27 +1,15 @@
 <template>
-  <!-- <div class="featured">
-    <figure>
-      <img :src="featured.image" 
-        :alt="featured.title"
-      />
-      <figcaption><b>{{featured.title}}</b></figcaption>
-      <blockquote>{{featured.details}}</blockquote>
-    </figure>
-  </div>
-  <div class="UserView">
-    <ThumbGrid :projects2="projects"/>
-  </div> -->
-  <div>
-    <figure class=".featured" v-for="(project, i) in projects" :key="i">
-      <img :src="project.image" :alt="project.title">
 
-    </figure>
-    <!-- <img v-for="(project, i) in projects" :key="i" :src="project.image" :alt="project.title"> -->
+  <div class="UserView">
+    <ThumbGrid 
+      :projects2="projects"
+      @click="displayFeatured"
+    />
   </div>
 </template>
 
 <script>
-import ThumbGrid from "./ThumbGrid.vue"
+import ThumbGrid from "./ThumbGrid.vue";
 
 export default {
   name: "UserView",
@@ -30,11 +18,16 @@ export default {
     ThumbGrid
   },
 
-  props: ["projects"],
+  props: ["projects", "displayFeatured"],
 
   data() {
     return {
-      featured: this.projects[0]
+      featured: this.projects[0],
+    }
+  },
+  methods: {
+    setFeatured(id) {
+      this.featured = displayFeatured;
     }
   }
 };
@@ -42,25 +35,27 @@ export default {
 </script>
 
 <style>
-figure,
-blockquote {
-  margin:0;
-  width: 100%;
-}
+
 .featured {
+  margin: 30px 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+
 }
-.featured img {
+.featured > div {
   width: 50%;
-  height: auto;
-  object-fit: cover;
+}
+
+featured_image {
+  width: 100px;
+	object-fit: cover;
 	aspect-ratio: 1/1;
 }
-figcaption,
+
+/* figcaption,
 blockquote {
   top: 0;
   right: 0
-}
+} */
 </style>
