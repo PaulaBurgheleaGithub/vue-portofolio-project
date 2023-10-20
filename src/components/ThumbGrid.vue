@@ -17,7 +17,7 @@
 				:key="i"
 				:src="p.image"
 				:alt="p.title"
-				@click="$event => setFeatured(p)"
+				@click="$event => setFeatured(p.id)"
 			/>
 		</div>
 	</div>
@@ -33,9 +33,8 @@ export default {
 	emits: ["displayFeatured"],
 
 	methods:{
-		setFeatured(project) {
-			this.featured = project;
-			this.emits("displayFeatured", project);
+		setFeatured(id) {
+			this.featured = this.projects2.find(p => p.id === id);
 		}
 	},
 	data() {
@@ -83,3 +82,5 @@ export default {
 }
 
 </style>
+
+

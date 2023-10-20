@@ -3,7 +3,7 @@
   <div class="UserView">
     <ThumbGrid 
       :projects2="projects"
-      @click="displayFeatured"
+      @click="$event => setFeatured(p)"
     />
   </div>
 </template>
@@ -26,8 +26,8 @@ export default {
     }
   },
   methods: {
-    setFeatured(id) {
-      this.featured = displayFeatured;
+    setFeatured(project) {
+      this.featured = project;
     }
   }
 };
