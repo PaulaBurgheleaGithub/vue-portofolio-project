@@ -1,7 +1,8 @@
 repo_name: PaulaBurgheleaGithub/vue-portofolio-project
 report_id: f59fb0c406f067754e31a6a0471bed51
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T15:39:22+00:00'
+timestamp: '2024-01-04T15:01:12+00:00'
 requested_by: PaulaBurgheleaGithub
 provider: github
 branch: main
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project
   detection_source: Repo Metadata
 - name: SQL
   description: It is a domain-specific language used in programming
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project/blob/main/db.sql
   detection_source: db.sql
 - name: Vue.js
   description: A progressive framework for building user interfaces
@@ -36,7 +39,7 @@ tools:
   category: Libraries
   sub_category: Javascript MVC Frameworks
   image_url: https://img.stackshare.io/service/3837/paeckCWC.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: github-classroom[bot]
   last_updated_on: 2023-07-24 09:55:03.000000000 Z
@@ -48,6 +51,7 @@ tools:
   category: Application Hosting
   sub_category: Realtime Backend / API
   image_url: https://img.stackshare.io/service/116/cZLxNFZS.jpg
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project/blob/main/package.json
   detection_source: package.json
   last_updated_by: Paula Burghelea
   last_updated_on: 2023-07-31 00:52:48.000000000 Z
@@ -59,6 +63,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project
   detection_source: Repo Metadata
 - name: npm
   description: The package manager for JavaScript.
@@ -68,6 +73,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project/blob/main/package.json
   detection_source: package.json
   last_updated_by: github-classroom[bot]
   last_updated_on: 2023-07-24 09:55:03.000000000 Z
@@ -81,7 +87,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15844/default_b71c906aeda030a5e2f1fe40bf12a93be52404ab.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/PaulaBurgheleaGithub/vue-portofolio-project/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: github-classroom[bot]
   last_updated_on: 2023-07-24 09:55:03.000000000 Z
